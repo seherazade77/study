@@ -11,7 +11,11 @@
 <body>
   
 <input type="button" value="fetch" onclick="
- alert('hi')
+fetch('html').then(function(respose){
+respose.text().then(fuction(text){
+alert(text)
+})
+})
 ">
 </body>
 
