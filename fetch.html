@@ -13,7 +13,7 @@
 <input type="button" value="fetch" onclick="
 fetch('html').then(function(respose){
 respose.text().then(fuction(text){
-alert(text)
+document.querySelector('article').innerHTML=text;
 })
 })
 ">
