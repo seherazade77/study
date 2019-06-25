@@ -12,13 +12,12 @@
 
 </head>
 
-
 <body>
   
 <input type="button" value="fetch" onclick="
 fetch('html').then(function(response){
 response.text().then(function(text){
-document.querySelector('article').innerHTML=text
+document.querySelector('article').innerHTML=text;
 })
 })
 ">
