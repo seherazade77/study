@@ -21,19 +21,29 @@ nightDayHandler(this);
 <ol>
     
 <li><a onclick="
-document.querySelector('article').innerHTML='<h2>HTML</h2>HTML is ...';
+fetchpage(html)';
 ">HTML</a></li>
     
 <li><a onclick="
-document.querySelector('article').innerHTML='<h2>HTML</h2>CSS is ...';
+fetchpage(css)';
 ">CSS</a></li>
     
 <li><a onclick="
-document.querySelector('article').innerHTML='<h2>HTML</h2>JavaScript is ...';
-">JavaScript</a></li>
+fetchpage(javaScript)';
+">Javascript</a></li>
   
 </ol>
   
+
+<scrpit>
+function fetchpage(){
+      fetch('html').then(function(response){
+        response.text().then(function(text){
+          document.querySelector('article').innerHTML = text;
+        })
+      })
+}
+</script>
 
 <article></article>
 </body>
